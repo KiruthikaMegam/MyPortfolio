@@ -1,0 +1,167 @@
+.navbar {
+  width: 100%;
+  min-height: 72px;
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border-bottom: 0.5px solid rgb(135, 130, 130);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #111111;
+}
+
+.logo {
+    color: #ffffff;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.list li {
+  margin: 0;
+  padding: 0;
+}
+
+.list a {
+  display: block;
+  padding: 8px 10px;
+  text-decoration: none;
+    color: #ffffff;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.list a:hover {
+  color: #ed659e;
+  transform: translateY(-2px);
+}
+
+.list a.active {
+  background-color: #ed659e;
+  color: #ffffff;
+  padding: 10px 14px;
+}
+
+.menuIcon {
+  display: none;
+  width: 42px;
+  height: 42px;
+  padding: 6px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuIcon img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.menuIcon:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    min-height: 68px;
+    padding: 10px 25px;
+  }
+
+  .logo h1 {
+    font-size: 26px;
+  }
+
+  .menuIcon {
+    display: flex;
+  }
+
+  .list {
+    position: absolute;
+    top: 68px;
+    left: 0;
+    width: 100%;
+    padding: 25px;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    box-sizing: border-box;
+    background: #111111;
+    border-bottom: 1px solid rgb(80, 77, 77);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .list.showMenu {
+    display: flex;
+  }
+
+  .list li {
+    width: 100%;
+  }
+
+  .list a {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 15px;
+  }
+
+  .list a:hover {
+    transform: translateX(5px);
+    background-color: #fce4ef;
+  }
+
+  .list a.active {
+    padding: 12px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    min-height: 64px;
+    padding: 8px 18px;
+  }
+
+  .logo h1 {
+    font-size: 23px;
+  }
+
+  .menuIcon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .menuIcon img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .list {
+    top: 64px;
+    padding: 20px 18px;
+  }
+
+  .list a {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,354 @@
+.aboutPage {
+  width: 100%;
+  min-height: 100vh;
+  padding: 90px 8%;
+  background: #ffffff;
+  color: #434445;
+  overflow: hidden;
+}
+
+.aboutHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #dddddd;
+}
+
+.aboutHeader p {
+  margin: 0 0 12px;
+  color: #ed659e;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.aboutHeader h1 {
+  margin: 0;
+  font-size: clamp(42px, 5vw, 65px);
+  line-height: 1;
+  letter-spacing: -3px;
+}
+
+.aboutHeader > span {
+  color: #999999;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.aboutMain {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  padding: 85px 0;
+}
+
+.aboutIntro {
+  position: relative;
+}
+
+.aboutLabel {
+  display: block;
+  margin-bottom: 25px;
+  color: #999999;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.aboutIntro h2 {
+  max-width: 500px;
+  margin: 0;
+  font-size: clamp(38px, 4.5vw, 62px);
+  line-height: 1.05;
+  letter-spacing: -3px;
+}
+
+.aboutIntro h2 span {
+  display: block;
+  background: linear-gradient(90deg, #ed659e, #68e2eb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.aboutDescription {
+  padding-top: 10px;
+}
+
+.aboutDescription p {
+  max-width: 600px;
+  margin: 0 0 22px;
+  color: #777777;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.aboutDescription p:last-child {
+  margin-bottom: 0;
+}
+
+.aboutCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding-bottom: 85px;
+}
+
+.aboutCard {
+  position: relative;
+  min-height: 300px;
+  padding: 28px;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  background: #ffffff;
+  overflow: hidden;
+  transition: 0.35s ease;
+}
+
+.aboutCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #ed659e, #68e2eb);
+  transition: 0.4s ease;
+}
+
+.aboutCard:hover {
+  transform: translateY(-7px);
+  border-color: #cccccc;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.07);
+}
+
+.aboutCard:hover::before {
+  width: 100%;
+}
+
+.aboutCardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 45px;
+}
+
+.aboutCardTop span {
+  color: #999999;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.aboutCardTop b {
+  color: #ed659e;
+  font-size: 22px;
+  font-weight: 400;
+  transition: 0.3s ease;
+}
+
+.aboutCard:hover .aboutCardTop b {
+  transform: translate(4px, -4px);
+}
+
+.aboutCard h3 {
+  margin: 0 0 15px;
+  color: #434445;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.aboutCard p {
+  margin: 0;
+  color: #777777;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.aboutCardLine {
+  width: 35px;
+  height: 1px;
+  margin-top: 25px;
+  background: #dddddd;
+}
+
+.aboutTechnology {
+  display: block;
+  margin-top: 15px;
+  color: #aaaaaa;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.aboutBottom {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  align-items: center;
+  gap: 70px;
+  padding: 45px 0;
+  border-top: 1px solid #dddddd;
+}
+
+.aboutBottom span {
+  display: block;
+  margin-bottom: 12px;
+  color: #999999;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.aboutBottom h2 {
+  margin: 0;
+  font-size: clamp(25px, 3vw, 38px);
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+.aboutBottom h2 strong {
+  display: block;
+  background: linear-gradient(90deg, #ed659e, #68e2eb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.aboutBottom > p {
+  margin: 0;
+  color: #777777;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+@media (max-width: 1000px) {
+  .aboutPage {
+    padding: 75px 6%;
+  }
+
+  .aboutMain {
+    gap: 55px;
+  }
+
+  .aboutCards {
+    grid-template-columns: 1fr;
+  }
+
+  .aboutCard {
+    min-height: auto;
+  }
+
+  .aboutBottom {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 700px) {
+  .aboutPage {
+    padding: 60px 25px;
+  }
+
+  .aboutHeader h1 {
+    font-size: 45px;
+    letter-spacing: -2px;
+  }
+
+  .aboutHeader > span {
+    font-size: 9px;
+  }
+
+  .aboutMain {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 60px 0;
+  }
+
+  .aboutIntro h2 {
+    font-size: 43px;
+  }
+
+  .aboutDescription {
+    padding-top: 0;
+  }
+
+  .aboutDescription p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .aboutCards {
+    gap: 15px;
+    padding-bottom: 60px;
+  }
+
+  .aboutCard {
+    padding: 25px;
+  }
+
+  .aboutCardTop {
+    margin-bottom: 30px;
+  }
+
+  .aboutBottom {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .aboutBottom > p {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutPage {
+    padding: 50px 20px;
+  }
+
+  .aboutHeader {
+    align-items: flex-start;
+  }
+
+  .aboutHeader h1 {
+    font-size: 38px;
+  }
+
+  .aboutHeader > span {
+    margin-top: 10px;
+  }
+
+  .aboutMain {
+    padding: 50px 0;
+  }
+
+  .aboutIntro h2 {
+    font-size: 37px;
+    letter-spacing: -2px;
+  }
+
+  .aboutDescription p {
+    font-size: 13px;
+  }
+
+  .aboutCard h3 {
+    font-size: 21px;
+  }
+
+  .aboutCard p {
+    font-size: 13px;
+  }
+
+  .aboutBottom {
+    padding: 40px 0;
+  }
+
+  .aboutBottom h2 {
+    font-size: 27px;
+  }
+
+  .aboutBottom > p {
+    font-size: 13px;
+  }
+}
